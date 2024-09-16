@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calendar-section">
+            <label for="startDate">Select Start Date: </label>
+            <input type="date" id="startDate">
+            <br>
+            <label for="endDate">Select End Date: </label>
+            <input type="date" id="endDate">
+            
+            <p id="dateDifference"></p>
+        </div>
+
+        <div class="event-section">
+            <h3>Enter Events</h3>
+            <br/>
+            <label for="eventName">Event Name: </label>
+            <input type="text" id="eventName">
+            <br/>
+            <label for="eventDate">Event Date: </label>
+            <input type="date" id="eventDate">
+            
+            <button id="addEventBtn">Add Event</button>            
+        </div>
+    </div>
+    <div class="container">
+        <div class="event-list-section">
+            <h3>Events List</h3><br/>
+            <ul id="eventsList" style="list-style: none;"></ul>
+            <br/>
+            <button
+            id="saveWordBtn"
+            style="display: none;"
+            >Export List
+        </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- for saving the list -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    
+</body>
+</html>
